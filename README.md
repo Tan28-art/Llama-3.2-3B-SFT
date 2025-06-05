@@ -157,7 +157,7 @@ The model was fine-tuned using the `Llama3.2-3B-final-fine-tune.ipynb` notebook.
     * `train_runtime`: 8087.8856 seconds
     * `train_samples_per_second`: 10.884
     * `train_steps_per_second`: 0.34
-    (Full results can be found in the project's shared Google Drive, as mentioned in the report.)
+(Model was evaluated on an 800 prompts sample provided to us. It contained a diverese set of prompts for testing model generalization.)
 
 ## Explored Techniques
 The following techniques were explored during the project:
