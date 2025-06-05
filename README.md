@@ -99,9 +99,7 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
 ├── LLM_Server_Final.py         # FastAPI server script for model deployment
 ├── Llama3.2-3B-final-fine-tune.ipynb # Jupyter notebook for fine-tuning
 ├── README.md                   # This file
-├── requirements.txt            # Python library requirements
-└── models/
-   └── llama3.2-3b-sft-merged-2048sl/ # Directory for the fine-tuned model (see Model Setup)
+└──requirements.txt            # Python library requirements
 ```
 ## Setup and Usage
 
@@ -111,8 +109,8 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
 
 ### Model Setup
 1.  **Base Model:** You need access to the `meta-llama/Llama-3.2-3B` model.
-2.  **Fine-tuned Model:** The fine-tuned model used in this project is `llama3.2-3b-sft-merged-2048sl`.
-    * **Option A (Download):** Download the fine-tuned model files and place them in a directory (e.g., `./models/llama3.2-3b-sft-merged-2048sl/`).
+2.  **Fine-tuned Model:** 
+    * **Option A (Download):** Download the fine-tuned model files and place them in a directory (e.g., `./models/llama3.2-3b-sft-merged-2048sl/`). Currently I am not uploading the model weights. 
     * **Option B (Reproduce):** Run the `Llama3.2-3B-final-fine-tune.ipynb` notebook. This will generate the adapters. You will then need to merge these adapters with the base model to get the `llama3.2-3b-sft-merged-2048sl` model. Ensure the output path in the notebook corresponds to where the server expects the model.
 3.  **Configure Model Path:** In `LLM_Server_Final.py`, update the `MERGED_MODEL_PATH` variable to point to the location of your fine-tuned model:
     ```python
