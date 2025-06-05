@@ -1,0 +1,27 @@
+# Core ML/DL Libraries
+torch
+transformers
+datasets
+accelerate
+peft
+bitsandbytes
+trl
+sentencepiece
+
+# Evaluation & NLP
+evaluate
+bert_score
+rouge_score
+nltk
+
+# API & Server
+fastapi
+uvicorn
+
+# Inference Acceleration
+vllm
+
+# Utilities & Client
+requests
+numpy # Used in LLM_Server_Final.py for ROUGE selection logic
+tensorboard
