@@ -3,24 +3,29 @@
 ## Table of Contents
 1.  [Introduction](#introduction)
 2.  [Key Features](#key-features)
-3.  [Architecture](#architecture)
+3.  [Chat Results](#chat-results)
+4.  [Architecture](#architecture)
     * [Model](#model)
     * [Fine-Tuning](#fine-tuning)
     * [Inference](#inference)
     * [Backend & Client](#backend--client)
-4.  [Project Structure](#project-structure)
-5.  [Setup and Usage](#setup-and-usage)
+5.  [Project Structure](#project-structure)
+6.  [Setup and Usage](#setup-and-usage)
     * [Prerequisites](#prerequisites)
     * [Model Setup](#model-setup)
     * [Server Setup](#server-setup)
     * [Client Setup](#client-setup)
-6.  [Training Details](#training-details)
-7.  [Performance](#performance)
-8.  [Explored Techniques](#explored-techniques)
-9.  [License](#license)
+7.  [Training Details](#training-details)
+8.  [Performance](#performance)
+9.  [Explored Techniques](#explored-techniques)
+10.  [License](#license)
 
 ## Introduction
 This project focuses on utilizing the Llama 3.2-3B language model to create a capable AI assistant. The assistant is designed to understand and respond to user queries effectively by leveraging various performance improvement techniques, including Supervised Fine-Tuning (SFT), Self-Consistency for inference, and a robust backend system for deployment. The core of the project involves fine-tuning the Llama model on a diverse set of datasets to enhance its instruction following, safety alignment, mathematical reasoning, and general question-answering capabilities.
+
+## Chat Results
+![Chat Example Screenshot 1](./images/llama-sft-chat-1.png)
+![Chat Example Screenshot 2](./images/llama-sft-chat-2.png)
 
 ## Key Features
 * **Fine-tuned Llama 3.2-3B Model:** Leverages a powerful base model fine-tuned for enhanced assistant capabilities.
