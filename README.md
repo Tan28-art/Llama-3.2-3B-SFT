@@ -25,7 +25,7 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
 
 ## Chat Results
 ![Chat Example Screenshot 1](./images/llama-sft-chat-1.png)
-![Chat Example Screenshot 2](./images/llama-sft-chat-2.png)
+
 
 ## Key Features
 * **Fine-tuned Llama 3.2-3B Model:** Leverages a powerful base model fine-tuned for enhanced assistant capabilities.
