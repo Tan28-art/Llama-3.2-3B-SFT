@@ -38,6 +38,21 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
 ### Model
 * **Base Model:** `meta-llama/Llama-3.2-3B`
 
+### Technology Stack
+*   **Programming Language:** Python
+*   **Core Libraries:**
+    *   PyTorch
+    *   Transformers (HuggingFace)
+    *   Datasets (HuggingFace)
+    *   Accelerate (HuggingFace)
+    *   PEFT (Parameter-Efficient Fine-Tuning, HuggingFace)
+    *   BitsAndBytes (for quantization)
+    *   TRL (Transformer Reinforcement Learning, HuggingFace)
+    *   SentencePiece
+*   **Inference:** vLLM
+*   **API Development:** FastAPI, Uvicorn
+*   **Evaluation:** NLTK, Evaluate (BERTScore, ROUGE Score)
+
 ### Fine-Tuning
 * **Method:** Supervised Fine-Tuning (SFT) using QLoRA to manage computational resources.
 * **Datasets:** A combination of publicly available datasets were used for fine-tuning, subsetted to a maximum of 10,000 samples each, resulting in a final sample size of 88,031. Key datasets include:
