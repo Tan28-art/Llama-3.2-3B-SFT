@@ -84,20 +84,20 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
 ├── LLM_Server_Final.py         # FastAPI server script for model deployment
 ├── Llama3.2-3B-final-fine-tune.ipynb # Jupyter notebook for fine-tuning
 ├── README.md                   # This file
+├── requirements.txt            # Python library requirements
 └── models/
-└── llama3.2-3b-sft-merged-2048sl/ # Directory for the fine-tuned model (see Model Setup)
+   └── llama3.2-3b-sft-merged-2048sl/ # Directory for the fine-tuned model (see Model Setup)
 ```
 ## Setup and Usage
 
 ### Prerequisites
-* Python 3.8+
-* Access to a machine with GPU(s) compatible with vLLM and PyTorch (e.g., NVIDIA A100 for training/vLLM).
-* Familiarity with setting up Python environments.
+* Python 3.9+
+* Access to a machine with GPU(s) compatible with vLLM and PyTorch (e.g., NVIDIA A100 for training/vLLM). 
 
 ### Model Setup
 1.  **Base Model:** You need access to the `meta-llama/Llama-3.2-3B` model.
 2.  **Fine-tuned Model:** The fine-tuned model used in this project is `llama3.2-3b-sft-merged-2048sl`.
-    * **Option A (Download):** If provided, download the fine-tuned model files and place them in a directory (e.g., `./models/llama3.2-3b-sft-merged-2048sl/`).
+    * **Option A (Download):** Download the fine-tuned model files and place them in a directory (e.g., `./models/llama3.2-3b-sft-merged-2048sl/`).
     * **Option B (Reproduce):** Run the `Llama3.2-3B-final-fine-tune.ipynb` notebook. This will generate the adapters. You will then need to merge these adapters with the base model to get the `llama3.2-3b-sft-merged-2048sl` model. Ensure the output path in the notebook corresponds to where the server expects the model.
 3.  **Configure Model Path:** In `LLM_Server_Final.py`, update the `MERGED_MODEL_PATH` variable to point to the location of your fine-tuned model:
     ```python
@@ -107,9 +107,9 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
 ### Server Setup
 1.  **Create a Python environment and install dependencies:**
     ```bash
-    pip install -r requirements_server.txt
+    pip install -r requirements.txt
     ```
-    Key dependencies include `fastapi`, `uvicorn`, `vllm`, `transformers`, `torch`, `evaluate` (for ROUGE).
+    Key dependencies include `fastapi`, `uvicorn`, `vllm`, `transformers`, `torch`, `evaluate`.
 2.  **Run the FastAPI server:**
     ```bash
     python LLM_Server_Final.py
@@ -117,12 +117,7 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
     By default, the server starts on `0.0.0.0:8004`. You can modify the host and port in the `uvicorn.run` call at the end of the script if needed.
 
 ### Client Setup
-1.  **Create a Python environment and install dependencies:**
-    ```bash
-    pip install -r requirements_client.txt
-    ```
-    Key dependency is `requests`.
-2.  **Run the client:**
+1.  **Run the client:**
     ```bash
     python LLM_Client_Final.py [--host <server_host>] [--port <server_port>]
     ```
