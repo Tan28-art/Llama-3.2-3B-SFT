@@ -78,7 +78,7 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
     * A Python script (`LLM_Client_Final.py`) that allows users to interact with the FastAPI server.
 
 ## Project Structure
-
+```
 .
 ├── LLM_Client_Final.py         # Client script to interact with the server
 ├── LLM_Server_Final.py         # FastAPI server script for model deployment
@@ -86,7 +86,7 @@ This project focuses on utilizing the Llama 3.2-3B language model to create a ca
 ├── README.md                   # This file
 └── models/
 └── llama3.2-3b-sft-merged-2048sl/ # Directory for the fine-tuned model (see Model Setup)
-
+```
 ## Setup and Usage
 
 ### Prerequisites
