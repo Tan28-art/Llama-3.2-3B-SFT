@@ -2,8 +2,8 @@
 
 ## Table of Contents
 1.  [Introduction](#introduction)
-2.  [Key Features](#key-features)
-3.  [Chat Results](#chat-results)
+2.  [Chat Results](#chat-results)
+3.  [Key Features](#key-features)
 4.  [Architecture](#architecture)
     * [Model](#model)
     * [Fine-Tuning](#fine-tuning)
